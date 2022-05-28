@@ -84,10 +84,10 @@ body {
 
 .green {
     background-color: green;
+    transition: all 2s;
 }
 
 .green:hover {
     background-color: rgb(0, 87, 0);
     transform: rotateY(180deg);
-    transition: all 2s;
 }
