@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Blaka&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: darkgrey;
+}
+
+.container {
+    margin: 0 auto;
+    border: 1px solid darkblue;
+    height: 1000px;
+    width: 1000px;
+}
+
+.header-container {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.header-container h1 {
+    font-family: 'Blaka', cursive;
+    letter-spacing: .4rem;
+    font-size: 3rem;
+    color: darkblue;
+}
+
+.animation-box {
+    border: 2px solid goldenrod;
+    height: 604px;
+    width: 604px;
+    margin: 3rem auto;
+}
+
+.animation-box > div {
+    border: 2px solid beige;
+    border-radius: 50%;
+    height: 200px;
+    margin: 0 auto;
+    width: 200px;
+}
+
+.red {
+    background-color: red;
+    position: relative;
+    animation-name: redAnimation;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes redAnimation {
+    0% { /* 0% Animation starts */
+        top: -330px;
+    }
+    60% {
+        top: 0px;
+    }
+    80% {
+        top: -35px;
+    }
+    100% { /* 100% - animation ends */
+        top: 0px;
+    }
+}
+
+.yellow {
+    background-color: yellow;
+    animation-name: yellowAnimation;
+    animation-duration: 5s;
+    animation-fill-mode: forwards; /* Ei lase animatsioonil minna vaikimisi v22rtusele */
+    opacity: 0;
+}
+
+@keyframes yellowAnimation {
+    100% {
+        opacity: 1;
+    }
+}
+
+.green {
+    background-color: green;
+}
+
+.green:hover {
+    background-color: rgb(0, 87, 0);
+    transform: rotateY(180deg);
+    transition: all 2s;
+}
